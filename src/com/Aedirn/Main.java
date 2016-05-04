@@ -21,7 +21,24 @@ public class Main {
         Question q2 = new Question("choisis 2","1","2","3","4",2);
         Question q3 = new Question("choisis 3","1","2","3","4",3);
 
-        Themes test = new Themes("test");
+        Theme test1 = new Theme("test1");
+
+        test1.ajouterQuestion(q1);
+        test1.ajouterQuestion(q2);
+        test1.ajouterQuestion(q3);
+
+
+        Theme test2 = new Theme("test2");
+        test2.ajouterQuestion(q1);
+        test2.ajouterQuestion(q2);
+        test2.ajouterQuestion(q3);
+
+        Themes collection = new Themes();
+
+        collection.ajouterTheme(test1);
+        collection.ajouterTheme(test2);
+
+
 
         System.out.println("Veuillez entrer le pseudo du joueur 1 : ");
         String pseudoj1 = reader.next();
@@ -34,21 +51,18 @@ public class Main {
 
         j1.affiche();
         j2.affiche();
+        Partie partie = new Partie(j1,j2);
+        partie.selecTheme();
+        collection.afficheThemes();
 
-        Random rand = new Random();
-        int value = rand.nextInt(2)+1;
 
-        if (value==1)
-        {
-            System.out.println("Le joueur 1 choisit le thème :");
 
-        }
 
 
 
         /*
-        Joueur j1 =new Joueur("test1");
-        Joueur j2 =new Joueur("test2");
+        Joueur j1 =new Joueur("test11");
+        Joueur j2 =new Joueur("test12");
 
 
 
@@ -67,12 +81,12 @@ public class Main {
         Question q2 = new Question("choisis 2","1","2","3","4",2);
         Question q3 = new Question("choisis 3","1","2","3","4",3);
 
-        Themes test = new Themes("test");
-        test.ajouterQuestion(q1);
-        test.ajouterQuestion(q2);
-        test.ajouterQuestion(q3);
-        test.affiche();
-        test.afficheClés();
+        Themes test1 = new Themes("test1");
+        test1.ajouterQuestion(q1);
+        test1.ajouterQuestion(q2);
+        test1.ajouterQuestion(q3);
+        test1.affiche();
+        test1.afficheClés();
         */
 
 

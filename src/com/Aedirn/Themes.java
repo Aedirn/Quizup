@@ -8,33 +8,29 @@ import java.util.TreeMap;
  */
 public class Themes {
     private Question questions;
-    private String nomTheme;
 
-    TreeMap<String, Question> theme = new TreeMap<String, Question>();
+    TreeMap<String, Theme> themes = new TreeMap<String, Theme>();
 
-    public Themes(String nomTheme)
+    public Themes()
     {
-        this.nomTheme=nomTheme;
+
     }
-    public void ajouterQuestion(Question question)
+    public void ajouterTheme(Theme theme)
     {
-        theme.put(question.getQuestion(),question);
+        themes.put(theme.getNomTheme(),theme);
     }
-    public void affiche()
+
+    public void afficheThemes()
     {
-        System.out.println(theme);
-    }
-    public String getNomTheme()
-    {
-        return nomTheme;
-    }
-    public void afficheClés()
-    {
-        Set<String> clés = theme.keySet();
+
+        Set<String> clés = themes.keySet();
         for (String clé : clés){
             System.out.println(clé);
         }
+
     }
+
+
 
 
 }
