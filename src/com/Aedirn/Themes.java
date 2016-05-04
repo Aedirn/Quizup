@@ -30,6 +30,11 @@ public class Themes {
 
     }
 
+    public Theme choisirTheme(String clé)
+    {
+        return themes.get(clé);
+    }
+
 
 
 

@@ -55,6 +55,14 @@ public class Main {
         partie.selecTheme();
         collection.afficheThemes();
 
+        String clé = reader.next();
+        Theme themeChoisi = collection.choisirTheme(clé);
+
+        System.out.println("les question du thèmes choisi sont :");
+        themeChoisi.afficheClés();
+
+
+
 
 
 
