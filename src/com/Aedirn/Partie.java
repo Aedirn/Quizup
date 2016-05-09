@@ -33,7 +33,12 @@ public class Partie {
             System.out.println("Le joueur 2 choisit le thème :");
             return 2;
         }
-    }
 
+
+    }
+    public void repondre()
+    {
+
+    }
 
 }

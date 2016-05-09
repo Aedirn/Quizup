@@ -1,5 +1,9 @@
 package com.Aedirn;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -10,6 +14,9 @@ public class Question {
     private int bonneReponse;
     private String question;
     private String[] reponses;
+    private String nomFichier,reponse1,reponse2,reponse3,reponse4;
+
+
 
 
     public Question(String question, String reponse1,String reponse2, String reponse3, String reponse4, int bonneReponse)
@@ -36,4 +43,6 @@ public class Question {
     {
         return reponses;
     }
+
+
 }
