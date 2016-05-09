@@ -47,7 +47,7 @@ public class Theme {
         this.nomTheme = nomTheme;
         BufferedReader fichier = null;
         try {
-            fichier = new BufferedReader(new FileReader(nomTheme));
+            fichier = new BufferedReader(new FileReader(nomTheme+".txt"));
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

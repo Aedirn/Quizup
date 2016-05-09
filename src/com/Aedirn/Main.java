@@ -38,6 +38,10 @@ public class Main {
         collection.ajouterTheme(test1);
         collection.ajouterTheme(test2);
 
+        Theme CULTURE = new Theme("CULTURE");
+        CULTURE.chargement("CULTURE");
+        collection.ajouterTheme(CULTURE);
+
 
 
         System.out.println("Veuillez entrer le pseudo du joueur 1 : ");
