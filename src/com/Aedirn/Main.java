@@ -65,59 +65,6 @@ public class Main {
         System.out.println("les question du thèmes choisi sont :");
         themeChoisi.afficheClés();
 
-
-
-
-
-
-
-
-        /*
-        Joueur j1 =new Joueur("test11");
-        Joueur j2 =new Joueur("test12");
-
-
-
-
-
-        j1.setScore(32);
-        j1.affiche();
-
-        j2.affiche();
-
-        Question q1 = new Question("choisis 1","1","2","3","4",1);
-        System.out.println(q1.getQuestion());
-        System.out.println(Arrays.toString(q1.getReponses()));
-        System.out.println(q1.getBonneReponse());
-
-        Question q2 = new Question("choisis 2","1","2","3","4",2);
-        Question q3 = new Question("choisis 3","1","2","3","4",3);
-
-        Themes test1 = new Themes("test1");
-        test1.ajouterQuestion(q1);
-        test1.ajouterQuestion(q2);
-        test1.ajouterQuestion(q3);
-        test1.affiche();
-        test1.afficheClés();
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }
