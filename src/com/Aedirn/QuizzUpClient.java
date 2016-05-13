@@ -2,6 +2,7 @@ package com.Aedirn;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Scanner;
 
 /**
  * Created by jeremy on 13/05/2016.
@@ -14,6 +15,7 @@ public class QuizzUpClient {
     }
 
     public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
 
         String host = "localhost";
         try {
@@ -21,10 +23,18 @@ public class QuizzUpClient {
             QuizzUpInterface stub = (QuizzUpInterface) registry.lookup("quizz");
             String response = stub.sayHello();
             System.out.println("response: " + response);
+
+            System.out.println("Veuillez entrer le pseudo du joueur 1 : ");
+            String pseudo = reader.next();
+            stub.creerJoueur(pseudo);
+
+
+
         } catch (Exception e) {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
         }
+
 
     }
 }

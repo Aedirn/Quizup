@@ -10,13 +10,23 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterface {
 
-    public QuizzUpServer() throws RemoteException {
+    public QuizzUpServer() throws RemoteException
+    {
         super();
     }
 
-    public String sayHello() {
-        return "Hello, world!";
+    public String sayHello()
+    {
+        return "Dank m3m3s bruh";
     }
+
+    public void creerJoueur(String pseudo)
+    {
+        Joueur joueur = new Joueur(pseudo);
+        System.out.println("Joueur créé avec le pseudo : "+pseudo);
+    }
+
+
     public static void main(String args[]) {
 
         try {
