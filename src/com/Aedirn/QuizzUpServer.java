@@ -3,18 +3,27 @@ package com.Aedirn;
 /**
  * Created by jeremy on 13/05/2016.
  */
+import jdk.nashorn.internal.scripts.JO;
+
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.TreeMap;
 
 public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterface {
 
     private int lobby;
+    private ArrayList lobbyJoueur;
+    //TreeMap<String,Joueur> lobbyJoueur = new TreeMap<String,Joueur>();
+
+
     public QuizzUpServer() throws RemoteException
     {
         super();
         lobby=0;
+
     }
 
     public String sayHello()
@@ -27,6 +36,7 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
         Joueur joueur = new Joueur(pseudo);
         System.out.println("Joueur créé avec le pseudo : "+pseudo);
         lobby++;
+        lobbyJoueur.add(lobby,pseudo);
         return true;
     }
 
@@ -34,10 +44,10 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
     {
         while (lobby <2)
         {
-
         }
         System.out.println("La partie va commencer");
         lobby = 0;
+        Partie partie = new Partie(lobbyJoueur.get(1), lobbyJoueur.get(2));
         return true;
     }
 
