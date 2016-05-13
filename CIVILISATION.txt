@@ -1,0 +1,11 @@
+Quelle est la langue la plus parlée en Europe ?;Le français;L’anglais;L’allemand;L'espagnol;2
+Lequel est un intrus ?;Le fromage;Le vin;La baguette;Les frites;3
+Laquelle de ces spécialités gastronomiques n’est pas lyonnaise ?;La quenelle de brochet;Le tablier de sapeur;La tarte aux pralines;Le cassoulet;3
+Que font deux Français pour se dire bonjour ?;Ils se serrent la main;Ils se font le baise-main;Ils s’ignorent;Ils s’embrassent;0
+Comment dit-on “Au revoir” en Breton ?;Demat;Kenavo;Noz vat;Mar plij;1
+Combien y a-t-il environ de caractères en chinois ?;5 000;10 000;50 000;100 000;2
+Quelles sont les couleurs du drapeau du Languedoc Roussillon ?;Rouge et Jaune;Bleu et Jaune;Noir et Jaune;Vert et Jaune;0
+Lequel n’est pas une spécialité parisienne ?;La baguette;L’opéra;La poularde à la briarde;La chocolatine;3
+Quelle phrase entend-on souvent lors d’une partie de pétanque ?;Tu tires ou tu pointes ?;Pastis heureux ou merveilleux ?;Vas-y lance la boule !;Où est le cochonnet ?;0
+L’allemand est dite la langue de…;Hitler;Goethe;Bach;Merkel;1
+Dans quel monument parisien sont inhumés des personnalités célèbres ?;La Tour Eiffel;Notre-Dame-de-Paris;Le Panthéon;Le Musée d’Orsay;2
