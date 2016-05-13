@@ -1,4 +1,11 @@
 Dans quel film Tom Hanks a-t-il joué ?;Casino Royal;Django Unchained;Gran Torino;Forrest Gump;3
 Quel réalisateur a écrit à propos de Chaplin: “Il est au-dessus de tout éloge puisque c’est le plus grand.”?;Robert Altman;François Truffaut;Jean-Luc Godard;Howard Hawks;2
 Dans lequel de ces films David Lynch apparaît-il à l'écran ?;Lost Highway;Twin Peaks;Sailor et Lula;Lol;0
-  iyigyi
+Quelle chanson n'a pas été interprétée par Dalida ?;Déshabillez-moi;J'attendrais;Bambino;Tout l'Amour;0
+Un tigre rôde dans un clip vidéo de Michael Jackson. Lequel?;I'll Be There;Beat it;Thriller;Billie Jean;3	 	 	
+La “Symphonie Inachevée" est de…;Ludwig van Beethoven;Franz Schubert;Wolfgang Amadeus Mozart;Johann Sebastian Bach;1
+Quel est le record du monde détenu par Renaud Lavillenie en 2014 ?;5,30m;4,56m;6,14m;6,16m;3
+Pour quelle raison Charles Trenet est-il allé chanter en Allemagne pendant la seconde guerre mondiale ?;Pour pouvoir gagner plus d’argent;Car il a été forcé;Pour soutenir le moral des prisonniers français;Car il voulait êter connu à travers le monde;2
+Quel est le mouvement dont fait partie Claude Monet ?;Le néo-expressionnisme;Le surréalisme;Le symbolisme;L’impressionnisme;3
+Qui est le dresseur de pikachu ?;Sacha;Cristophe;Ondine;Pierre;0
+Qui est le créateur de Mario Kart ?;Hideki Konno;Bruce Shelley;Rick Goodman;Jackie Chan;0
