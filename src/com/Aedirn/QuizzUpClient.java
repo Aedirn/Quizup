@@ -11,7 +11,6 @@ public class QuizzUpClient {
 
     private QuizzUpClient()
     {
-
     }
 
     public static void main(String[] args) {
@@ -24,9 +23,14 @@ public class QuizzUpClient {
             String response = stub.sayHello();
             System.out.println("response: " + response);
 
-            System.out.println("Veuillez entrer le pseudo du joueur 1 : ");
+            System.out.println("Veuillez entrer votre pseudo : ");
             String pseudo = reader.next();
             stub.creerJoueur(pseudo);
+            System.out.println("en attente de l'autre joueur ...");
+            stub.lobby();
+
+
+
 
 
 

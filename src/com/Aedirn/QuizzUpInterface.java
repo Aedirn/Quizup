@@ -10,6 +10,8 @@ public interface QuizzUpInterface extends Remote {
 
     String sayHello() throws RemoteException;
 
-    void creerJoueur(String pseudo) throws RemoteException;
+    Boolean creerJoueur(String pseudo) throws RemoteException;
+
+    Boolean lobby() throws RemoteException;
 
 }
