@@ -9,25 +9,36 @@ import java.util.Scanner;
  */
 public class QuizzUpClient {
 
+
+
     private QuizzUpClient()
     {
     }
 
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-
-        String host = "localhost";
+        int id;
+        String host = "172.16.233.213";
         try {
             Registry registry = LocateRegistry.getRegistry(host);
             QuizzUpInterface stub = (QuizzUpInterface) registry.lookup("quizz");
-            String response = stub.sayHello();
-            System.out.println("response: " + response);
-
             System.out.println("Veuillez entrer votre pseudo : ");
             String pseudo = reader.next();
             stub.creerJoueur(pseudo);
+            id = stub.setID();
+            System.out.println("Vous êtes le joueur "+id);
             System.out.println("en attente de l'autre joueur ...");
             stub.lobby();
+            System.out.println("Joueur trouvé ! La partie va commencer !!");
+            stub.resetLobby();
+            stub.chargerQuestions();
+            String[][] qpa = stub.returnQpa();
+            String[][] qca = stub.returnQca();
+            new Quiz(qpa,qca);
+
+
+
+
 
 
 

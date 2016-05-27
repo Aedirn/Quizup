@@ -8,10 +8,19 @@ import java.rmi.RemoteException;
  */
 public interface QuizzUpInterface extends Remote {
 
-    String sayHello() throws RemoteException;
 
     Boolean creerJoueur(String pseudo) throws RemoteException;
 
     Boolean lobby() throws RemoteException;
+
+    int setID() throws RemoteException;
+
+    boolean chargerQuestions() throws RemoteException;
+
+    String[][] returnQca() throws RemoteException;
+
+    String[][] returnQpa() throws RemoteException;
+
+    boolean resetLobby() throws RemoteException;
 
 }
