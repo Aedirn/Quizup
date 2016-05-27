@@ -10,7 +10,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
+        /*
         Scanner reader = new Scanner(System.in);
 
         Question q1 = new Question("choisis 1","1","2","3","4",1);
@@ -64,6 +64,7 @@ public class Main {
 
         System.out.println("les question du thèmes choisi sont :");
         themeChoisi.afficheClés();
+        */
 
     }
 

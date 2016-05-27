@@ -10,13 +10,14 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.Enumeration;
 import java.util.HashMap;
 
 /**
  * Created by jeremy on 20/05/2016.
  */
-public class Quiz extends JFrame implements ActionListener {
+public class Quiz extends JDialog implements ActionListener {
     JPanel panel;
     JPanel panelresult;
     JRadioButton Choix1;
@@ -31,12 +32,11 @@ public class Quiz extends JFrame implements ActionListener {
     int qaid;
     HashMap<Integer, String> map;
 
-    public Quiz(String[][] qpa, String[][] qca){
-        this.qca=qca;
-        this.qpa=qpa;
-        initializedata();
-        setTitle("Quizz'UP !");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    public Quiz(QuizzUpInterface quizzUpInterface, String pseudo){
+        this.setModal(true);
+        initializedata(quizzUpInterface);
+        setTitle(pseudo);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(430,350);
         setLocation(300,100);
         setResizable(false);
@@ -59,6 +59,7 @@ public class Quiz extends JFrame implements ActionListener {
         btnext.setForeground(Color.GREEN);
         btnext.addActionListener(this);
         panel=new JPanel();
+        readqa(qaid);
         panel.setBackground(Color.LIGHT_GRAY);
         panel.setLocation(10,10);
         panel.setSize(400,300);
@@ -96,56 +97,22 @@ public class Quiz extends JFrame implements ActionListener {
 
 
     }
+    public void initializedata(QuizzUpInterface quizzUpInterface) {
 
-
-
-    public void initializedata(){
-
-        //qpa stores pairs of question and its possible answers
         qpa=new String[10][5];
         qca=new String[10][2];
-
-
-        int i = 0;
-        int numBonneRep;
-
-        String nomTheme = "CULTURE";
-
-        BufferedReader fichier = null;
+        //qpa stores pairs of question and its possible answers
         try {
-            fichier = new BufferedReader(new FileReader(nomTheme+".txt"));
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
+            qpa = quizzUpInterface.returnQpa();
+            qca = quizzUpInterface.returnQca();
+        } catch (RemoteException e) {
             e.printStackTrace();
         }
-        String ligne = null;
-        try {
-            while ((ligne = fichier.readLine()) != null)
-            {
-                String[] mots = ligne.split(";");
-                qpa[i][0] = mots[0];
-                qpa[i][1] = mots[1];
-                qpa[i][2] = mots[2];
-                qpa[i][3] = mots[3];
-                qpa[i][4] = mots[4];
-                //numBonneRep = Integer.parseInt(mots[5]);
-
-                qca[i][0]=mots[0];
-                qca[i][1]=mots[5];
-                i++;
-
-            }
-            fichier.close();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
 
         //create a map object to store pairs of question and selected answer
-        map=new HashMap<Integer, String>();
-
+        map = new HashMap<Integer, String>();
     }
+
     public String getSelection(){
         String selectedChoice=null;
         Enumeration<AbstractButton> buttons=bg.getElements();
@@ -169,6 +136,8 @@ public class Quiz extends JFrame implements ActionListener {
         Choix4.setText(qpa[qid][4]);
         Choix1.setSelected(true);
     }
+
+
     public void reset(){
 
         qaid=0;
@@ -179,20 +148,21 @@ public class Quiz extends JFrame implements ActionListener {
     public int calCorrectAnswer(){
         int qnum=10;
         int count=0;
-        for(int qid=0;qid<qnum;qid++)
+        for(int qid=0;qid<qnum;qid++) {
             if(qca[qid][1].equals(map.get(qid))) count++;
+        }
+
         return count;
     }
 
-    public class Report extends JFrame {
+    public class Report extends JDialog {
         Report(){
             setTitle("Réponses");
             setSize(850,550);
             setBackground(Color.WHITE);
             addWindowListener(new WindowAdapter(){
                 public void windowClosing(WindowEvent e){
-                    dispose();
-                    reset();
+
                 }
             });
             Draw d=new Draw();

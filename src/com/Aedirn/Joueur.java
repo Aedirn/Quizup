@@ -6,10 +6,11 @@ package com.Aedirn;
 public class Joueur {
 
     private String pseudo;
-    private int score;
+    private int score,ID;
 
-    public Joueur(String pseudo)
+    public Joueur(String pseudo, int ID)
     {
+        this.ID = ID;
         this.pseudo=pseudo;
         score = 0;
     }
@@ -31,6 +32,11 @@ public class Joueur {
     public void setScore(int nouveauScore)
     {
         this.score= nouveauScore;
+    }
+
+    public int getID()
+    {
+        return ID;
     }
 
 }

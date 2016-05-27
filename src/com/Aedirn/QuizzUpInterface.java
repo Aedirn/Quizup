@@ -11,7 +11,7 @@ public interface QuizzUpInterface extends Remote {
 
     Boolean creerJoueur(String pseudo) throws RemoteException;
 
-    Boolean lobby() throws RemoteException;
+    int lobby() throws RemoteException;
 
     int setID() throws RemoteException;
 
@@ -22,5 +22,9 @@ public interface QuizzUpInterface extends Remote {
     String[][] returnQpa() throws RemoteException;
 
     boolean resetLobby() throws RemoteException;
+
+    boolean registerScore(int IDJoueur, int score, int IDPartie) throws RemoteException;
+
+    boolean winner(int IDPartie, int IDJoueur) throws RemoteException;
 
 }

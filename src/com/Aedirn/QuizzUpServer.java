@@ -14,43 +14,50 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.TreeMap;
 
 public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterface {
 
-    private int lobby;
+    private int lobby, IDJoueur, IDPartie, IDVainqueur, compteur;
     private ArrayList lobbyJoueur = new ArrayList();
+    private ArrayList listePartie = new ArrayList();
+
     String[][] qpa;
     String[][] qca;
 
 
-    //TreeMap<String,Joueur> lobbyJoueur = new TreeMap<String,Joueur>();
+    HashMap<Integer,Joueur> joueurCo = new HashMap<>();
+    HashMap<Integer,Partie> Parties = new HashMap<>();
 
 
     public QuizzUpServer() throws RemoteException
     {
         super();
         lobby=0;
-
+        IDJoueur=0;
+        IDPartie=0;
+        compteur=0;
     }
 
 
     public Boolean creerJoueur(String pseudo) // on créé un nouveau joueur avec cette méthode
     {
-        Joueur joueur = new Joueur(pseudo);
+        Joueur joueur = new Joueur(pseudo,IDJoueur);
         System.out.println("Joueur créé avec le pseudo : "+pseudo);
-
+        joueurCo.put(lobby,joueur);
         lobbyJoueur.add(joueur);
         return true;
     }
 
     public int setID()
     {
+        IDJoueur++;
         lobby++;
-        return lobby;
+        return IDJoueur;
     }
 
-    public synchronized Boolean lobby() // pour placer un joueur en attente
+    public synchronized int lobby() // pour placer un joueur en attente
     {
         while (lobby <2)
         {
@@ -67,15 +74,50 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
         Joueur j1 = (Joueur) lobbyJoueur.get(0);
         Joueur j2 = (Joueur) lobbyJoueur.get(1);
         Partie partie = new Partie(j1,j2);
-        return true;
+        Parties.put(IDPartie,partie);
+        return IDPartie;
     }
+
+
 
     public synchronized boolean resetLobby()
     {
+        IDPartie++;
         lobby=0;
         return true;
     }
 
+    public boolean registerScore(int IDJoueur, int score, int IDPartie )
+    {
+        Joueur joueur = joueurCo.get(IDJoueur);
+        joueur.setScore(score);
+        System.out.println("score : "+joueur.getScore());
+        Partie partie = Parties.get(IDPartie);
+        System.out.println("ID partie : "+ IDPartie);
+        compteur++;
+
+        return true;
+    }
+
+    public synchronized boolean winner(int IDPartie, int  IDJoueur)
+    {
+        Partie partie = Parties.get(IDPartie);
+        while (compteur<2)
+        {
+            try {
+                Thread.sleep(1000);
+                System.out.println(compteur);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        IDVainqueur = partie.vainqueur();
+
+        System.out.println("ID Vainqueur : "+IDVainqueur);
+        if (IDJoueur==IDVainqueur)
+            return true;
+        else return false;
+    }
 
 
 
@@ -134,11 +176,7 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
 
 
     }
-    public boolean resultat()
-    {
-        // prend en arg les score
-        // dit qui a gagné
-    }*/
+    */
 
     public static void main(String args[]) {
 
