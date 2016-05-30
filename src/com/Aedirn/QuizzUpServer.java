@@ -3,8 +3,6 @@ package com.Aedirn;
 /**
  * Created by jeremy on 13/05/2016.
  */
-import jdk.nashorn.internal.scripts.JO;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -121,12 +119,12 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
 
 
 
-    public synchronized boolean chargerQuestions()
+    public synchronized boolean chargerQuestions(String nomTheme)
     {
         qpa=new String[10][5];
         qca=new String[10][2];
         int i = 0;
-        String nomTheme = "CULTURE";
+        //String nomTheme = "CULTURE";
 
         BufferedReader fichier = null;
         try {
