@@ -10,15 +10,15 @@ public class FenetreAttente extends Container {
 
 
 
-    public FenetreAttente(QuizzUpClient quizzUpClient)
+    public FenetreAttente(QuizzUpClient quizzUpClient, String pseudo)
     {
+
+
+        JLabel affichePseudo = new JLabel("Votre pseudo est : "+pseudo);
         JLabel text = new JLabel("En attente de l'autre joueur ...");
-        JButton retour = new JButton("Retour");
-        this.setLayout(new GridLayout(2,2));
-        retour.addActionListener (quizzUpClient);
-        retour.setActionCommand("RETOUR");
+        this.setLayout(new GridLayout(6,1));
+        this.add(affichePseudo);
         this.add(text);
-        this.add(retour);
     }
 
 

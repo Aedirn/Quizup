@@ -46,7 +46,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
 
         cp = getContentPane();
 
-        fenetreAttente = new FenetreAttente(this);
         confirmation = new Confirmation(this);
         c2 = new Contenu(this, stub);
 
@@ -156,13 +155,14 @@ public class QuizzUpClient extends JFrame implements ActionListener
             idPartie = stub.lobby();
             System.out.println("Joueur trouvé ! La partie va commencer !!");
             stub.resetLobby();
-            stub.chargerQuestions("MONDE");
+            stub.chargerQuestions("CULTURE");
             /*String[][] qpa = stub.returnQpa();
             String[][] qca = stub.returnQca();*/
 
             System.out.println("ID : " + idJoueur+" "+idPartie);
+            this.setVisible(false);
             Quiz quiz = new Quiz(stub,pseudo);
-
+            this.setVisible(true);
 
             int Score = quiz.calCorrectAnswer();
             System.out.println("Attente de l'autre joueur ...");
@@ -183,6 +183,8 @@ public class QuizzUpClient extends JFrame implements ActionListener
     }
     public void repaint(String pseudo)
     {
+        fenetreAttente = new FenetreAttente(this,pseudo);
+
         this.setContentPane(fenetreAttente);
         this.validate();
         this.repaint();
@@ -214,6 +216,7 @@ public class QuizzUpClient extends JFrame implements ActionListener
                 String pseudo = c2.getText();
                 System.out.println(pseudo);
                 repaint(pseudo);
+                this.setVisible(true);
                 break;
 
 

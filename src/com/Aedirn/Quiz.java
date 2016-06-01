@@ -38,7 +38,7 @@ public class Quiz extends JDialog implements ActionListener {
         setTitle(pseudo);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(430,350);
-        setLocation(300,100);
+        setLocationRelativeTo(null);
         setResizable(false);
         Container cont=getContentPane();
         cont.setLayout(null);
@@ -93,7 +93,8 @@ public class Quiz extends JDialog implements ActionListener {
             }
         }
         else if(btnext.getText().equals("Résultat"))
-            new Report();
+            dispose();
+            //new Report();
 
 
     }

@@ -14,11 +14,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
+import javax.swing.border.Border;
 
 public class Contenu extends Container implements ActionListener {
 	public JTextField saisie;
@@ -35,16 +32,24 @@ public class Contenu extends Container implements ActionListener {
 		retour.addActionListener((ActionListener) quizzUpClient);
 		retour.setActionCommand("RETOUR");
 
-		JPanel textfield = new JPanel(new GridLayout(2, 1));
-		JPanel down = new JPanel(new GridLayout(2,4));
+
+		JPanel textfield = new JPanel(new GridLayout(2, 1,10,10));
+		JPanel down = new JPanel(new GridLayout(3,2));
+
+
+
+		Border vide = BorderFactory.createRaisedBevelBorder();
+
 
 		label1 = new JLabel("Entrez votre pseudo :");
 		label1.setOpaque(true);
-		label1.setPreferredSize(new Dimension(200, 20));
+		//label1.setPreferredSize(new Dimension(200, 20));
 		label1.setHorizontalAlignment(JLabel.CENTER);
 		label1.setBackground(Color.white);
 		label1.setForeground(Color.black);
+		label1.setBorder(vide);
 
+		label1.setLayout(new FlowLayout());
 		JLabel filler1  = new JLabel("");
 		JLabel filler2  = new JLabel("");
 		JLabel filler3  = new JLabel("");
@@ -69,19 +74,18 @@ public class Contenu extends Container implements ActionListener {
 		textfield.add(label1);
 		textfield.add(saisie);
 
+		this.add(textfield);
 
 
 		down.add(filler1);
 		down.add(filler2);
 
 		down.add(bout1);
+		down.add(retour,BorderLayout.SOUTH);
 
-		//down.add(filler3);
+		down.add(filler3);
+		down.add(filler4);
 
-		down.add(retour);
-		//down.add(filler4);
-
-		this.add(textfield);
 		this.add(down);
 
 
