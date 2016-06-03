@@ -43,7 +43,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
         ImageIcon image = new ImageIcon("quizup-logo.png");
         JLabel label = new JLabel("", image, JLabel.CENTER);
 
-
         cp = getContentPane();
 
         confirmation = new Confirmation(this);
@@ -187,8 +186,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
 
         this.setContentPane(fenetreAttente);
         this.validate();
-        this.repaint();
-        initPartie(pseudo);
     }
 
         @Override
@@ -216,6 +213,9 @@ public class QuizzUpClient extends JFrame implements ActionListener
                 String pseudo = c2.getText();
                 System.out.println(pseudo);
                 repaint(pseudo);
+                Refresh refresh = new Refresh(this, pseudo);
+
+                refresh.start();
                 this.setVisible(true);
                 break;
 
