@@ -39,7 +39,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setTitle("QuizUP");
 
-
         ImageIcon image = new ImageIcon("quizup-logo.png");
         JLabel label = new JLabel("", image, JLabel.CENTER);
 
@@ -167,9 +166,17 @@ public class QuizzUpClient extends JFrame implements ActionListener
             System.out.println("Attente de l'autre joueur ...");
             stub.registerScore(idJoueur,Score,idPartie);
 
+
+            this.setContentPane(fenetreAttente);
+            this.validate();
+            String result;
             if (stub.winner(idPartie,idJoueur))
-                System.out.println("Vous avez gagné !");
-            else System.out.println("vous avez perdu ;(");
+                 result =  "Vous avez gagné !";
+            else result = "vous avez perdu ;(";
+
+            FenetreResultats resultats = new FenetreResultats(this,result);
+            this.setContentPane(resultats);
+            this.validate();
 
         } catch (RemoteException e) {
             e.printStackTrace();

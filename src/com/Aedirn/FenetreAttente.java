@@ -16,7 +16,9 @@ public class FenetreAttente extends Container {
 
         JLabel affichePseudo = new JLabel("Votre pseudo est : "+pseudo);
         JLabel text = new JLabel("En attente de l'autre joueur ...");
-        this.setLayout(new GridLayout(6,1));
+        this.setLayout(new GridLayout(2,1));
+        text.setHorizontalAlignment(JLabel.CENTER);
+        affichePseudo.setHorizontalAlignment(JLabel.CENTER);
         this.add(affichePseudo);
         this.add(text);
     }
