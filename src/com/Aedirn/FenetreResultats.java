@@ -8,16 +8,16 @@ import java.awt.*;
  */
 public class FenetreResultats extends Container {
 
-    public FenetreResultats(QuizzUpClient quizzUpClient,String text)
+    public FenetreResultats(QuizzUpClient quizzUpClient,ImageIcon resultat)
     {
-        JLabel resultat = new JLabel(text);
+        JLabel label = new JLabel("", resultat, JLabel.CENTER);
         JButton retour = new JButton("Retour");
         this.setLayout(new GridLayout(2,1));
         JPanel up = new JPanel();
         JPanel down = new JPanel(new BorderLayout());
         retour.addActionListener (quizzUpClient);
         retour.setActionCommand("RETOUR");
-        up.add(resultat);
+        up.add(label);
         down.add(retour, BorderLayout.SOUTH);
 
         this.add(up);

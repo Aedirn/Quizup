@@ -110,10 +110,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
             if (stub.winner(idPartie,idJoueur))
                 System.out.println("Vous avez gagné !");
             else System.out.println("vous avez perdu ;(");
-
-
-
-
 */
 
         } catch (Exception e) {
@@ -153,7 +149,7 @@ public class QuizzUpClient extends JFrame implements ActionListener
             idPartie = stub.lobby();
             System.out.println("Joueur trouvé ! La partie va commencer !!");
             stub.resetLobby();
-            stub.chargerQuestions("CULTURE");
+            stub.chargerQuestions();
             /*String[][] qpa = stub.returnQpa();
             String[][] qca = stub.returnQca();*/
 
@@ -169,10 +165,14 @@ public class QuizzUpClient extends JFrame implements ActionListener
 
             this.setContentPane(fenetreAttente);
             this.validate();
-            String result;
+            ImageIcon result;
+            ImageIcon win = new ImageIcon("win.png");
+            ImageIcon loose = new ImageIcon("loose.png");
+
+
             if (stub.winner(idPartie,idJoueur))
-                 result =  "Vous avez gagné !";
-            else result = "vous avez perdu ;(";
+                 result =  win;
+            else result = loose;
 
             FenetreResultats resultats = new FenetreResultats(this,result);
             this.setContentPane(resultats);
@@ -219,9 +219,9 @@ public class QuizzUpClient extends JFrame implements ActionListener
             case "Enter":
                 String pseudo = c2.getText();
                 System.out.println(pseudo);
+
                 repaint(pseudo);
                 Refresh refresh = new Refresh(this, pseudo);
-
                 refresh.start();
                 this.setVisible(true);
                 break;

@@ -20,7 +20,7 @@ public class Partie {
         compteur=0;
     }
 
-    public int selecTheme()
+    /*public int selecTheme()
     {
         Random rand = new Random();
         int value = rand.nextInt(2)+1;
@@ -37,7 +37,7 @@ public class Partie {
         }
 
 
-    }
+    }*/
     public int getScoreJ1()
     {
         return j1.getScore();
@@ -68,6 +68,31 @@ public class Partie {
         if (j1.getScore()>j2.getScore())
             return j1.getID();
         else return j2.getID();
+    }
+
+    public String selecTheme()
+    {
+        String nomTheme;
+        Random rand = new Random();
+        int value = rand.nextInt(2)+1;
+        switch (value){
+            case 1 :
+                nomTheme = "CULTURE";
+                break;
+            case 2 :
+                nomTheme = "MONDE";
+                break;
+            case 3 :
+                nomTheme = "SCIENCES";
+                break;
+            case 4 :
+                nomTheme = "CIVILISATION";
+                break;
+            default:
+                nomTheme = "CULTURE";
+                break;
+        }
+        return nomTheme;
     }
 
 

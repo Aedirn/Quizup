@@ -15,7 +15,7 @@ public interface QuizzUpInterface extends Remote {
 
     int setID() throws RemoteException;
 
-    boolean chargerQuestions(String nomTheme) throws RemoteException;
+    boolean chargerQuestions() throws RemoteException;
 
     String[][] returnQca() throws RemoteException;
 

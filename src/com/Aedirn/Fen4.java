@@ -13,12 +13,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Fen4 extends JFrame{
+public class Fen4 extends Container{
 
-	public Fen4(QuizzUpClient quizzUpClient){
-		
-
-
+	public Fen4(QuizzUpClient quizzUpClient)
+	{
 		JButton retour = new JButton("Retour");
 		this.setLayout(new BorderLayout());
 		retour.addActionListener (quizzUpClient);

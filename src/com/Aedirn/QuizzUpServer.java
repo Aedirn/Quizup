@@ -13,6 +13,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.TreeMap;
 
 public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterface {
@@ -20,6 +21,7 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
     private int lobby, IDJoueur, IDPartie, IDVainqueur, compteur;
     private ArrayList lobbyJoueur = new ArrayList();
     private ArrayList listePartie = new ArrayList();
+    private String nomTheme;
 
     String[][] qpa;
     String[][] qca;
@@ -39,10 +41,11 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
     }
 
 
-    public Boolean creerJoueur(String pseudo) // on créé un nouveau joueur avec cette méthode
+    public  Boolean creerJoueur(String pseudo) // on créé un nouveau joueur avec cette méthode
     {
         Joueur joueur = new Joueur(pseudo,IDJoueur);
         System.out.println("Joueur créé avec le pseudo : "+pseudo);
+        System.out.println("Score du Joueur : "+joueur.getScore());
         joueurCo.put(lobby,joueur);
         lobbyJoueur.add(joueur);
         return true;
@@ -72,6 +75,7 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
         Joueur j1 = (Joueur) lobbyJoueur.get(0);
         Joueur j2 = (Joueur) lobbyJoueur.get(1);
         Partie partie = new Partie(j1,j2);
+        nomTheme = partie.selecTheme();
         Parties.put(IDPartie,partie);
         return IDPartie;
     }
@@ -88,6 +92,7 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
     public boolean registerScore(int IDJoueur, int score, int IDPartie )
     {
         Joueur joueur = joueurCo.get(IDJoueur);
+        System.out.println("Score du joeuru : "+score);
         joueur.setScore(score);
         System.out.println("score : "+joueur.getScore());
         Partie partie = Parties.get(IDPartie);
@@ -119,15 +124,15 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
 
 
 
-    public synchronized boolean chargerQuestions(String nomTheme)
+    public synchronized boolean chargerQuestions()
     {
         qpa=new String[10][5];
         qca=new String[10][2];
         int i = 0;
-        //String nomTheme = "CULTURE";
 
         BufferedReader fichier = null;
         try {
+
             fichier = new BufferedReader(new FileReader("/Users/jeremy/Documents/Projets Java/Quizup/"+nomTheme+".txt"));
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
