@@ -38,12 +38,12 @@ public class Partie {
 
 
     }*/
-    public int getScoreJ1()
+    public double getScoreJ1()
     {
         return j1.getScore();
     }
 
-    public int getjScoreJ2()
+    public double getjScoreJ2()
     {
         return j2.getScore();
     }

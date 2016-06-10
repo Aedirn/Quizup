@@ -6,7 +6,8 @@ package com.Aedirn;
 public class Joueur {
 
     private String pseudo;
-    private int score,ID;
+    private int ID;
+    private double score;
 
     public Joueur(String pseudo, int ID)
     {
@@ -24,12 +25,12 @@ public class Joueur {
     {
         return this.pseudo;
     }
-    public int getScore()
+    public double getScore()
     {
         return this.score;
     }
 
-    public void setScore(int nouveauScore)
+    public void setScore(double nouveauScore)
     {
         this.score= nouveauScore;
     }

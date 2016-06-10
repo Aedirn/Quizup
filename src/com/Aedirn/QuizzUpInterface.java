@@ -23,7 +23,7 @@ public interface QuizzUpInterface extends Remote {
 
     boolean resetLobby() throws RemoteException;
 
-    boolean registerScore(int IDJoueur, int score, int IDPartie) throws RemoteException;
+    boolean registerScore(int IDJoueur, double score, int IDPartie) throws RemoteException;
 
     boolean winner(int IDPartie, int IDJoueur) throws RemoteException;
 

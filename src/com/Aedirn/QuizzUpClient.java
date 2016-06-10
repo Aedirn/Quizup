@@ -49,7 +49,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
 
 
 
-
         jeu.addActionListener(this);
         jeu.setActionCommand("JEU");
         //this.add(jeu);
@@ -152,14 +151,18 @@ public class QuizzUpClient extends JFrame implements ActionListener
             stub.chargerQuestions();
             /*String[][] qpa = stub.returnQpa();
             String[][] qca = stub.returnQca();*/
+            Chronomètre chrono = new Chronomètre();
 
             System.out.println("ID : " + idJoueur+" "+idPartie);
             this.setVisible(false);
+            chrono.start();
             Quiz quiz = new Quiz(stub,pseudo);
+            chrono.stop();
             this.setVisible(true);
 
-            int Score = quiz.calCorrectAnswer();
+            double Score = ((quiz.calCorrectAnswer()*10)/chrono.getSeconds());
             System.out.println("Attente de l'autre joueur ...");
+            System.out.println("Score du joueur : "+Score);
             stub.registerScore(idJoueur,Score,idPartie);
 
 

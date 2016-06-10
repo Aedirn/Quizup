@@ -89,10 +89,10 @@ public class QuizzUpServer extends UnicastRemoteObject implements QuizzUpInterfa
         return true;
     }
 
-    public boolean registerScore(int IDJoueur, int score, int IDPartie )
+    public boolean registerScore(int IDJoueur, double score, int IDPartie )
     {
         Joueur joueur = joueurCo.get(IDJoueur);
-        System.out.println("Score du joeuru : "+score);
+        System.out.println("Score du joueur (code de debug): "+score);
         joueur.setScore(score);
         System.out.println("score : "+joueur.getScore());
         Partie partie = Parties.get(IDPartie);
