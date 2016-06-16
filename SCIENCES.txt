@@ -1,10 +1,10 @@
-Par qui a été inventé le téléphone ?;Bell;Téléphone;Orange;Cellulaire;0
-Qu'est-ce que le nombre d'Avogadro ?;Une formule magique;Un élément de calcul pour la construction des pyramides;Un nombre permettant les calculs en chimie;Le nombre qui permet de trouver la somme des étoiles dans une galaxie;2
-Qu'est-ce que le barycentre ?;Le centre de gravité d'un ensemble;Le centre auditif de l'oreille interne;Le centre de rassemblement des troupeaux d'éléphants;Ce mot n'existe pas;0
-Parmi ces unités d'optique, laquelle permet de mesurer l'intensité lumineuse ?;Le candela;La dioptrie;Le lumen;Le lux;3
-Lequel parmi ces os n’est pas dans l’avant-bras ?;Le radius;L’ulna;Le cubitus;L’humérus;3
-Quelle est l’invention la plus connue attribuée à Galilée ?;La lunette astronomique;La fibre optique;Le téléscope;Le sablier;0
-Quelle relation mathématique est donnée par le théorème de Pythagore ?;a2+b2=c2;cos(a) = 2sin(a);tan(b)=cos(b)/sin(b);A = 2pir2;0
-Quel iPhone n’est pas sorti sur le marché ?;iPhone 5C;iPhone 5S;iPhone 6 Plus;iPhone 6C;3
-Combien de litres de sang un adulte de 65 kg en bonne santé possède-t-il ?;1 à 2 litres;5 à 6 litres;9 à 10 litres;12 à 13 litres;1
-En quelle année l’aspirine a-t-elle été mise au point ?;1756;1802;1897;1953;2
+Par qui a été inventé le téléphone ?;Bell;Téléphone;Orange;Cellulaire;Bell
+Qu'est-ce que le nombre d'Avogadro ?;Une formule magique;Un élément de calcul pour la construction des pyramides;Un nombre permettant les calculs en chimie;Le nombre qui permet de trouver la somme des étoiles dans une galaxie;Un nombre permettant les calculs en chimie
+Qu'est-ce que le barycentre ?;Le centre de gravité d'un ensemble;Le centre auditif de l'oreille interne;Le centre de rassemblement des troupeaux d'éléphants;Ce mot n'existe pas;Le centre de gravité d'un ensemble
+Parmi ces unités d'optique, laquelle permet de mesurer l'intensité lumineuse ?;Le candela;La dioptrie;Le lumen;Le lux;Le lux
+Lequel parmi ces os n’est pas dans l’avant-bras ?;Le radius;L’ulna;Le cubitus;L’humérus;L’humérus
+Quelle est l’invention la plus connue attribuée à Galilée ?;La lunette astronomique;La fibre optique;Le téléscope;Le sablier;La lunette astronomique
+Quelle relation mathématique est donnée par le théorème de Pythagore ?;a2+b2=c2;cos(a) = 2sin(a);tan(b)=cos(b)/sin(b);A = 2pir2;a2+b2=c2
+Quel iPhone n’est pas sorti sur le marché ?;iPhone 5C;iPhone 5S;iPhone 6 Plus;iPhone 6C;iPhone 6C
+Combien de litres de sang un adulte de 65 kg en bonne santé possède-t-il ?;1 à 2 litres;5 à 6 litres;9 à 10 litres;12 à 13 litres;5 à 6 litres
+En quelle année l’aspirine a-t-elle été mise au point ?;1756;1802;1897;1953;1897

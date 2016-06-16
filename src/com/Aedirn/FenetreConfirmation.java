@@ -6,14 +6,14 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Confirmation extends JDialog implements ActionListener 
+public class FenetreConfirmation extends JDialog implements ActionListener
 {
 	
 	private JButton oui, non;
 	
-	public Confirmation(JFrame fenetre)
+	public FenetreConfirmation(JFrame fenetre)
 	{
-		super(fenetre, "Confirmation", true);
+		super(fenetre, "FenetreConfirmation", true);
 		this.setVisible(false);
 		this.setSize(300,100);
 		this.setLocation(250,250);

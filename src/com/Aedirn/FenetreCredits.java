@@ -13,14 +13,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class Fen4 extends Container{
+public class FenetreCredits extends Container{
 
-	public Fen4(QuizzUpClient quizzUpClient)
+	public FenetreCredits(QuizzUpClient quizzUpClient)
 	{
 		JButton retour = new JButton("Retour");
+		JPanel credits = new JPanel();
+		JLabel text = new JLabel("Credits : TEs "+"\n test ");
 		this.setLayout(new BorderLayout());
 		retour.addActionListener (quizzUpClient);
 		retour.setActionCommand("RETOUR");
+		credits.add(text);
+		this.add(credits, BorderLayout.NORTH);
 		this.add(retour, BorderLayout.SOUTH);
 	}
 }

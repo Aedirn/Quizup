@@ -17,9 +17,9 @@ import java.util.Scanner;
 public class QuizzUpClient extends JFrame implements ActionListener
 {
     private Container cp;
-    private Contenu c2;
-    private Confirmation confirmation;
-    private Fen4 cp3;
+    private FenetreLogin c2;
+    private FenetreConfirmation fenetreConfirmation;
+    private FenetreCredits cp3;
     private FenetreAttente fenetreAttente;
     private int idJoueur, idPartie;
 
@@ -44,8 +44,8 @@ public class QuizzUpClient extends JFrame implements ActionListener
 
         cp = getContentPane();
 
-        confirmation = new Confirmation(this);
-        c2 = new Contenu(this, stub);
+        fenetreConfirmation = new FenetreConfirmation(this);
+        c2 = new FenetreLogin(this, stub);
 
 
 
@@ -57,7 +57,7 @@ public class QuizzUpClient extends JFrame implements ActionListener
         cred.setActionCommand("M2");
         //this.add(cred);
 
-        cp3 = new Fen4(this);
+        cp3 = new FenetreCredits(this);
 
 
         quit.addActionListener(this);
@@ -213,7 +213,7 @@ public class QuizzUpClient extends JFrame implements ActionListener
                 this.validate();
                 break;
             case "QUIT":
-                confirmation.setVisible(true);
+                fenetreConfirmation.setVisible(true);
                 break;
             case "M2":
                 this.setContentPane(cp3);

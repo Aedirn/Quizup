@@ -17,14 +17,14 @@ import java.rmi.registry.Registry;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-public class Contenu extends Container implements ActionListener {
+public class FenetreLogin extends Container implements ActionListener {
 	public JTextField saisie;
 	private JLabel label1, label2, label3;
 	private JButton bout1;
 	QuizzUpInterface stub;
 	QuizzUpClient quizzUpClient;
 
-	public Contenu(QuizzUpClient quizzUpClient, QuizzUpInterface stub) {
+	public FenetreLogin(QuizzUpClient quizzUpClient, QuizzUpInterface stub) {
 		this.stub = stub;
 		this.quizzUpClient = quizzUpClient;
 		JButton retour = new JButton("Retour");

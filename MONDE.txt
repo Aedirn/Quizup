@@ -1,10 +1,10 @@
-Quelle est la date de la fin du Moyen-Age ?;1445;1789;1492;1890;2
-Combien y a-t-il de régions en France ?;7;10;14;22;2
-Combien y a-t-il eu de présidents de gauche lors de la Cinquième République ?;1;2;3;4;1
-Quelle est la capitale de la Slovaquie ?;Paris;Bratislava;Vilnius;Moscou;1
-Qui est le maire de Paris ?;Anne Hidalgo;Bertrand Delanoë;Rachida Dati;Luc Chatel;0
-Quel est le pays le plus peuplé en Afrique ?;Nigeria;Madagascar;Tunisie;Kenya;0
-Que s’est-il passé en 1515 ?;La naissance de François 1er;La bataille de Marignan;La mort de Charles Quint;Le massacre des Vaudois du Luberon;1
-Lequel de ces fleuves est le plus long ?;Le Yangzi Jiang;Le Saint-Laurent;Le Rhin;Le Colorado;0
-Combien d’années dura la Quatrième République ?;11 ans;12 ans;21 ans;22 ans;0
-Quelle est la date du Congrès de Tours ?;1910;1920;1930;1940;1
+Quelle est la date de la fin du Moyen-Age ?;1445;1789;1492;1890;1492
+Combien y a-t-il de régions en France ?;7;10;14;22;14
+Combien y a-t-il eu de présidents de gauche lors de la Cinquième République ?;1;2;3;4;2
+Quelle est la capitale de la Slovaquie ?;Paris;Bratislava;Vilnius;Moscou;Bratislava
+Qui est le maire de Paris ?;Anne Hidalgo;Bertrand Delanoë;Rachida Dati;Luc Chatel;Anne Hidalgo
+Quel est le pays le plus peuplé en Afrique ?;Nigeria;Madagascar;Tunisie;Kenya;Nigeria
+Que s’est-il passé en 1515 ?;La naissance de François 1er;La bataille de Marignan;La mort de Charles Quint;Le massacre des Vaudois du Luberon;La bataille de Marignan
+Lequel de ces fleuves est le plus long ?;Le Yangzi Jiang;Le Saint-Laurent;Le Rhin;Le Colorado;Le Yangzi Jiang
+Combien d’années dura la Quatrième République ?;11 ans;12 ans;21 ans;22 ans;11 ans
+Quelle est la date du Congrès de Tours ?;1910;1920;1930;1940;1920
