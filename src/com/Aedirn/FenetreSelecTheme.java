@@ -6,9 +6,9 @@ import java.awt.*;
 /**
  * Created by jeremy on 04/06/2016.
  */
-public class SelecTheme extends Container {
+public class FenetreSelecTheme extends Container {
 
-    public SelecTheme(QuizzUpClient quizzUpClient)
+    public FenetreSelecTheme(QuizzUpClient quizzUpClient)
     {
 
         JButton culture = new JButton("Culture");

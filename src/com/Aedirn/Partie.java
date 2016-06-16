@@ -10,7 +10,6 @@ import java.util.TreeMap;
 public class Partie {
 
     private Joueur j1,j2;
-    private Themes themes;
     private int compteur;
 
     public Partie(Joueur j1, Joueur j2)

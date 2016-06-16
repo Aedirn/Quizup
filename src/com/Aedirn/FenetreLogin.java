@@ -59,13 +59,6 @@ public class FenetreLogin extends Container implements ActionListener {
 		saisie.setPreferredSize(new Dimension(100,20));
 		//saisie.addActionListener(this);
 
-		/*label2 = new JLabel();
-		label2.setOpaque(true);
-		label2.setPreferredSize(new Dimension(200, 20));
-		label2.setHorizontalAlignment(JLabel.CENTER);
-		label2.setBackground(Color.white);
-		label2.setForeground(Color.black);
-		textfield.add(label2);*/
 
 		bout1 = new JButton("Valider");
 		bout1.setActionCommand("Enter");
