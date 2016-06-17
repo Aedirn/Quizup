@@ -47,8 +47,6 @@ public class QuizzUpClient extends JFrame implements ActionListener
         fenetreConfirmation = new FenetreConfirmation(this);
         c2 = new FenetreLogin(this, stub);
 
-
-
         jeu.addActionListener(this);
         jeu.setActionCommand("JEU");
         //this.add(jeu);
